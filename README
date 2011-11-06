@@ -1,0 +1,2 @@
+presento is a front end to deck.js and allows users to provide a simple UI to create decks. The backend is implemented using mongo and flask
+

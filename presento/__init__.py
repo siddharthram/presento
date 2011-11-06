@@ -196,8 +196,8 @@ def show_entries():
     return render_template('show_presentations.html', titles=titles)
     
     
-@app.route('/present')
-def present():
+#@app.route('/present')
+#def present():
     
 
 @app.route('/add', methods=['POST'])
