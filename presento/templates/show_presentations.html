@@ -1,0 +1,62 @@
+
+
+{% extends "layout.html" %}
+
+{% block body %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+
+<script type="text/javascript">
+$(document).ready (function () {
+	
+	
+})
+
+function newPreso() {
+	$('.show').hide();
+	var meta = "<div class=meta> {% if session.logged_in %} \
+    <form action='/meta' method=post class=add-entry>\
+      <dl>\
+        <dt>Title:\
+        <dd><input type=text placeholder='Title of Presentation' size=30 name=title> </input>\
+        <dt>Tags:\
+        <dd><input name=tags rows=5 cols=40></input>\
+        <dd><input type=submit value=Create>\
+      </dl>\
+    </form>\
+  {% endif %} </div>";
+	$('.top').append(meta);
+//	$('.top').load('newpreso');
+	
+}
+</script>
+
+<div class=show>
+	<!--
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+-->
+  <ul class=entries>
+	
+	<h2> Current Presentations </h2>
+	{% for t in titles %}
+		
+	    <li><b>{{ t[0].title|tojson|safe }}</b> </li>
+	{% endfor %}
+  
+  </ul>
+<button type="button" id='bNewPost' OnClick="newPreso();"> Add new Presentation </button>
+</div>
+{% endblock %}
+
