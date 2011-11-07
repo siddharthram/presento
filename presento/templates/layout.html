@@ -1,9 +1,72 @@
 <!doctype html>
 
-{% block head%}{% endblock %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+
+
+<script src="{{url_for('static', filename='deck/modernizr.custom.js') }}"> </script>
+<script src="{{url_for('static', filename='deck/core/deck.core.js') }}"> </script>
+
+<script src="{{url_for('static', filename='deck/extensions/goto/deck.goto.js') }}"> </script>
+<script src="{{url_for('static', filename='deck/extensions/hash/deck.hash.js') }}"> </script>
+<script src="{{url_for('static', filename='deck/extensions/menu/deck.menu.js') }}"> </script>
+<script src="{{url_for('static', filename='deck/extensions/scale/deck.scale.js') }}"> </script>
+
+<script src="{{url_for('static', filename='deck/extensions/navigation/deck.navigation.js') }}"> </script>
+<script src="{{url_for('static', filename='deck//extensions/status/deck.status.js') }}"> </script>
+
+
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/core/deck.core.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/extensions/goto/deck.goto.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/extensions/menu/deck.menu.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/extensions/navigation/deck.navigation.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/extensions/hash/deck.hash.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='deck/themes/transition/fade.css') }}">
+
+
+
+<!--
+
+<script src="static/deck/modernizr.custom.js"></script>
+<link rel="stylesheet" href="static/deck/core/deck.core.css">
+<link rel="stylesheet" href="static/deck/extensions/goto/deck.goto.css">
+<link rel="stylesheet" href="static/deck/extensions/menu/deck.menu.css">
+<link rel="stylesheet" href="static/deck/extensions/navigation/deck.navigation.css">
+<link rel="stylesheet" href="static/deck/extensions/status/deck.status.css">
+<link rel="stylesheet" href="static/deck/extensions/hash/deck.hash.css">
+
+-->
+
+<!-- Theme CSS files (menu swaps these out) -->
+<link rel="stylesheet" id="style-theme-link" href="{{url_for('static',filename='deck/themes/style/web-2.0.css')}}">
+<link rel="stylesheet" id="transition-theme-link" href="{{url_for('static',filename='deck/themes/transition/horizontal-slide.css')}}">
+
+
+{% block head%}
+
+
+
+{% endblock %}
+
+
+
+
 <div class=top>
 <title>Presento</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+
+<!--script src="static/deck/modernizr.custom.js"></script-->
+
+
+
+<!--script src="static/deck/core/deck.core.js"></script>
+<script src="static/deck/extensions/goto/deck.goto.js"></script>
+<script src="static/deck/extensions/hash/deck.hash.js"></script>
+<script src="static/deck/extensions/menu/deck.menu.js"></script>
+<script src="static/deck/extensions/navigation/deck.navigation.js"></script>
+<script src="static/deck/extensions/status/deck.status.js"></script-->	
+
 <div class=page>
   <h1>Presento</h1>
   <div class=metanav>

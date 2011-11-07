@@ -28,8 +28,10 @@
 }
 .deck-container h2 {
   color: #0b7495;
-  border-bottom: 0;
+  border-bottom: 1;
+  border-bottom-color: #89f;  
 }
+
 .cssreflections .deck-container h2 {
   line-height: 1;
   -webkit-box-reflect: below -0.556em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent));

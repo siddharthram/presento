@@ -57,6 +57,16 @@ def before_request():
     connect(app.config['MONGO_DB'])
     #meta = Meta.objects.first()
     #print "presid is %d" meta.presid
+    
+@app.route('/present/<presid>')
+def present(presid):
+   #
+   p = Presentation.objects(presid=presid).first()
+   return done(p)
+   
+   
+   
+  
   
 
 @app.route('/newpreso')
@@ -122,9 +132,9 @@ def add_page():
     
     page = Page(content=data, pagenum=newpage,title=title)
 
-    print "page is"
-    print page
-    print "end page"
+    
+    #print page
+    #print "end page"
     p.update(push__pages=page)
     print "before save: pres is" + str(p)
     p.save()
